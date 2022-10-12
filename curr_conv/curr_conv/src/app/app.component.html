@@ -1,0 +1,21 @@
+<div>
+  <h3>Currency converter</h3>
+  <div><form><label>From: </label>
+    <select #from>
+      <option value="Inr">Indian rupee</option>
+      <option value="Usd">United states doller</option>
+      <option value="Eur">Euro</option>
+     </select></form></div>
+     <br>
+   <div><form><label>To: </label>
+    <select #to>
+      <option value="Inr">Indian rupee</option>
+      <option value="Usd">United states doller</option>
+      <option value="Eur">Euro</option>
+     </select>
+   </form></div>
+   <br>
+  <label>Enter your Amount</label><input type="number" name="num1"[(ngModel)]="num1">
+  <button (click)="calculate(from.value,to.value)"><b>Submit</b></button>
+  <h3>Your Amount: {{result}}</h3>
+</div>
